@@ -1,0 +1,14 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const Book_1 = require("./Book");
+const Member_1 = require("./Member");
+const Library_1 = require("./Library");
+const library = new Library_1.Library();
+const book1 = new Book_1.Book(1, '2003', 'MOney tips');
+const book2 = new Book_1.Book(2, 'The Hobbit', 'emmanuel');
+library.addBook(book1);
+library.addBook(book2);
+const member = new Member_1.Member(1, 'Emmanuel');
+library.addMember(member);
+// console.log(member.borrow(book1.title));
+console.log('Available Books:', library.listAvailableBooks());
